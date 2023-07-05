@@ -1,0 +1,81 @@
+.button_list {
+  display: flex;
+}
+
+.button {
+  display: inline-flex;
+  margin: 10px;
+  text-decoration: none;
+  position: relative;
+  font-size: 15px;
+  line-height: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', Тahoma, sans-serif;
+  background: blueviolet;
+  cursor: pointer;
+  border: 2px solid #bfe2ff;
+  overflow: hidden;
+  z-index: 1;
+}
+.button:hover,
+.button:active,
+.button:focus {
+  color: #fff;
+}
+.button:before,
+.button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 100%;
+  background-color: violet;
+  z-index: -1;
+}
+.button:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+.button:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+.button:hover:before,
+.button:active:before,
+.button:focus:before {
+  animation: from-left 0.5s both;
+}
+.button:hover:after,
+.button:active:after,
+.button:focus:after {
+  animation: from-right 0.5s both;
+}
+@keyframes from-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 100%;
+  }
+}
+@keyframes from-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 100%;
+  }
+}

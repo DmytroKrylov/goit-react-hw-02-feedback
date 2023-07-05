@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/App';
-// import './index.css';
+import App from './App';
+import './index.css';
 
 // export const getRandomColor = () => {
 //   const letters = '0123456789ABCDEF';
